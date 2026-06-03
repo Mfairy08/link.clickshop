@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Roja</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>🛒 Tienda Roja</h1>
+</header>
+
+<div id="toast"></div>
+
+<main id="home">
+  <div id="products" class="products"></div>
+
+  <button class="primary" onclick="openCart()">Terminar compra</button>
+  <button class="secondary" onclick="showAdminLogin()">Soy admin</button>
+</main>
+
+<section id="cartView" class="hidden">
+  <h2>Resumen de compra</h2>
+  <div id="cartItems"></div>
+  <h3 id="total"></h3>
+  <button class="primary" onclick="finishPurchase()">Finalizar compra</button>
+</section>
+
+<section id="adminLogin" class="hidden">
+  <h2>Acceso administrador</h2>
+  <div id="mobileLogin">
+    <button class="primary" onclick="fingerprintLogin()">Verificar huella</button>
+  </div>
+  <div id="desktopLogin">
+    <input id="password" type="password" placeholder="Contraseña">
+    <button class="primary" onclick="passwordLogin()">Entrar</button>
+  </div>
+</section>
+
+<section id="adminPanel" class="hidden">
+  <h2>Panel de administración</h2>
+  <div id="adminProducts"></div>
+  <input id="name" placeholder="Nombre del producto">
+  <input id="price" type="number" placeholder="Precio">
+  <button class="primary" onclick="addProduct()">Agregar producto</button>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
